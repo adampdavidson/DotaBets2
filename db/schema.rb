@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(:version => 20131004021503) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "pledges", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "project_id"
-    t.integer  "amount"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.string   "team1"
@@ -43,13 +35,13 @@ ActiveRecord::Schema.define(:version => 20131004021503) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "username"
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.integer  "admin",            :default => 0
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
 end

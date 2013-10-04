@@ -1,7 +1,7 @@
 User.destroy_all
 Project.destroy_all
 
-user = User.create!(first_name: "John", last_name: "Doe", email: "john@doe.com", password: "password")
+user = User.create!(username: "Admin", email: "john@doe.com", password: "145773", admin: 1)
 
 50.times do |i|
   project1 = user.projects.create!(title: "Match #{i+1}", team1: "Liquid", team2: "Alliance",
