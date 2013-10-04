@@ -1,0 +1,2 @@
+module My::BetsHelper
+end

@@ -1,0 +1,48 @@
+<div class="signup">
+
+<h2>Sign Up for DotaBets!</h2>
+
+<%= form_for @user do |f| %>
+
+  <% if @user.errors.any? %>
+  <%= render :partial => "/users/signup-errors" %>
+  <% end %>
+
+  <div class="field">
+	<%= f.label :first_name %>
+	<%= f.text_field :first_name %>
+  </div> 
+
+  <div class="field">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  </div> 
+
+
+  <div class="field">
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+  </div> 
+
+  <div class="field">
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+  </div> 
+
+  <div class="field">
+	<%= f.label :password_confirmation %>
+	<%= f.password_field :password_confirmation %>
+  </div> 
+
+  <div class="action">
+  	
+  	<%= button_tag(type: "submit", class: "btn btn-success") do %>
+    <i class="icon-user"></i> Create Account 
+    <% end %>
+  </div>
+
+<% end %>	
+</div>
+<div class ="welcome">
+<%= image_tag("http://media.pcgamer.com/files/2013/01/splash-artwork.jpeg", :class => "welcome") %>
+</div>

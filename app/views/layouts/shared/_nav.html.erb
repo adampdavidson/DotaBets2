@@ -1,0 +1,53 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">DotaBets.com</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="<%= 'active' if current_page? root_path %>">
+            <%= link_to 'Home', :root %>
+          </li>
+          <li class="<%= 'active' if (controller_path== "projects") %>">
+            <%= link_to 'Matches', :projects %>
+          </li>
+          <% if logged_in? %>
+          <li class="<%= 'active' if (controller_path== "my/bets") %>">
+            <%= link_to 'My Bets', "/my/bets" %>
+          </li>
+          <%end%>
+        </ul>
+      
+
+      </div>
+        <div class="pull-right">
+        <% if logged_in? %>
+        <%= link_to 'Logout', :logout, class: 'btn btn-warning' %>
+         <% else %>
+
+         <%= link_to " Login ", :login , class: 'btn btn-success' %>
+         <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-success' %>
+
+        <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+  
+  <% if flash[:notice] != nil %>
+  <div class ="flashy">
+
+  <span class="label label-success">
+  <%= flash[:notice] %>
+  </span>
+  </div>
+  <%end%>
+
+  <% if flash[:alert] != nil %>
+  <div class ="flashy">
+
+  <span class="label label-warning">
+  <%= flash[:alert] %>
+  </span>
+  </div>
+  <%end%>
+

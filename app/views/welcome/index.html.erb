@@ -1,0 +1,57 @@
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- <img class="welcome" data-alt-src="http://www.dota2wallpapers.com/wp-content/uploads/2012/11/DotA-2-Ursa-Warrior-Wallpaper.jpg" src="http://onlyfreewallpaper.com/walls/troll-warlord-dota-2-art-other.jpg" />
+ -->
+
+
+<h1></h1>
+<div id="behindpic">
+<div id="home-slideshow">
+    <img src="http://www.dota2wallpapers.com/wp-content/uploads/2012/11/DotA-2-Ursa-Warrior-Wallpaper.jpg" alt="" class="active" />
+    <img src="http://onlyfreewallpaper.com/walls/troll-warlord-dota-2-art-other.jpg" alt="" />
+    <img src="http://img.gawkerassets.com/img/18fduh699rf79jpg/original.jpg" alt="" />
+</div>
+</div>
+
+
+<h1>FAQ</h1>
+
+<b>What is DotaBets?</b><br><br>
+DotaBets is a web application that facilitates a safe, fun and competitive environment for placing wagers on the outcomes of Dota matches.
+
+<br><br><b>Why DotaBets?</b><br><br>
+DotaBets was inspired the rapidly expanding e-sports fanbase. The matches require extreme concentration and skill from each individual player, but more importantly
+it's teamwork that leads the players to outplay the opposition. The fast-paced nature coupled with the game's intensity makes it extremely entertaining
+as a spectator sport.
+<br>
+<br>
+When you have something on the line other than seeing your favorite team win, another layer of entertainment is supplemented.
+
+<br><br><b>How does is DotaBets work?</b><br><br>
+
+You must first create an account so that the application can track your wagers and pay you out upon a successful outcome. DotaBets will never send you any emails
+unless they are requested.
+<br><br>
+Once you have an account, enter the matches tab on the navigation bar at the top of the page to browse upcoming matches. Select the match you wish to bet on and choose
+which team you think will win.
+<br><br>
+Click the My Bets top on the navigation bar to review your bets and watch the payouts get dynamically updated based on other users bets.
+<br><br>
+Finally, the key is to have fun. DotaBets is not for making substantial income. DotaBets is about adding another element of excitement to
+the e-sports spectatorship. 
+
+
+<script type="text/javascript">
+     $(document).ready(function() {
+
+$(function(){
+    $('#home-slideshow img:gt(0)').hide();
+    setInterval(function(){
+      $('#home-slideshow :first-child').fadeOut(800)
+         .next('img').fadeIn(1100)
+         .end().appendTo('#home-slideshow');}, 
+      5000);
+});
+
+});
+
+</script>

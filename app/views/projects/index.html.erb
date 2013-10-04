@@ -1,0 +1,24 @@
+<h1>Upcoming Matches</h1>
+
+<table class="table table-striped">
+	<tr class = "tablehead">
+	<td>Match</td>
+	<td>Team 1</td>
+	<td>Team 2</td>
+	<td>Match Time</td>
+	<td> </td>
+	</strong></tr>
+<% @projects.each do |project| %>
+	
+	<div class = "project">
+		<tr>
+  	<td><%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li></td>
+  	<td><%=project[:team1]%></td>
+  	<td><%=project[:team2]%></td>
+  	<td><%=project[:matchtime]%></td>
+  	<td> <%= link_to 'View Match Details', "/projects/#{project.id}", class: 'btn btn-warning' %></td>
+  	</tr>
+  </div>
+
+<% end %>
+</table>

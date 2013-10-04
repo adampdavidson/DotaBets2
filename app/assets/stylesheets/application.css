@@ -1,0 +1,70 @@
+/*
+*= require_self
+*= require_tree
+*/
+
+body {
+	padding-top: 40px;
+}
+
+.title{
+	list-style-type: none;
+}
+
+.navbar-inner {
+	background-image: linear-gradient(to bottom, rgb(136, 14, 14), #B97979);
+}
+
+.signup {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.action {
+	padding-top: 10px;
+}
+
+.error{
+	list-style-type: none;
+}
+
+.login{
+	padding-top: 1px;
+}
+
+.field{
+	margin-top: 6px;
+}
+
+.loggedin{
+	padding-right: 50px;
+}
+
+.flashy{
+	text-align: center;
+	margin-top: 15px;
+}
+
+.goal{
+	text-align: right;
+	padding-right: 15px;
+}
+
+.pledges{
+	text-align: left;
+}
+
+.tablehead{
+	font-weight: bold;
+}
+
+.welcome{
+-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+-moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.footerbar{
+	display: inline-block;
+	width:100%;
+}

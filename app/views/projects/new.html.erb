@@ -1,0 +1,53 @@
+<div class="pledge">
+
+<h2>Submit a new project!</h2>
+
+
+<%= form_for [@user, @project] do |f| %>
+
+  <% if @project.errors.any? %>
+    <div class = "error_messages">
+  	<h3>Unable to complete pledge:</h3>
+    <ul>
+
+  		<% for message in @project.errors.full_messages %>
+  			      <div class="alert alert-error">   
+              <strong>Error! </strong><%=message%>  
+              </div>  
+  		<% end %>
+  	</ul>
+  </div>
+  <% end %>
+  <br>
+  <div class="field">
+	<%= f.label :title %>
+	<%= f.text_field :title%>
+  </div> 
+   <div class="field">
+	<%= f.label :teaser %>
+	<%= f.text_field :teaser%>
+  </div> 
+   <div class="field">
+	<%= f.label :description %>
+	<%= f.text_area :description%>
+  </div> 
+    <div class="field">
+	<%= f.label :goal %>
+	<%= f.number_field :goal%>
+  </div> 
+
+
+
+
+    
+    <div class="action">
+  	
+  	<%= button_tag(type: "submit", class: "btn btn-success") do %>
+    <i class="icon-leaf"></i> Create Project
+    <% end %>
+  </div>
+ <%end%>
+ <br>
+ <br>
+ <br>
+ <%= link_to '< back to home', "/", class: 'btn btn-info' %>

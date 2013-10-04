@@ -1,0 +1,11 @@
+  <div class = "error_messages">
+  	<h3>Unable to create account:</h3>
+    <ul>
+
+  		<% for message in @user.errors.full_messages %>
+  			      <div class="alert alert-error">   
+              <strong>Error! </strong><%=message%>  
+              </div>  
+  		<% end %>
+  	</ul>
+  </div>

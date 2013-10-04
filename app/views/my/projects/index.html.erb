@@ -1,0 +1,32 @@
+<br>
+<%= link_to 'Browse Matches', "/my/projects/new", class: 'btn btn-success' %>
+<br>
+
+<h1>My Bets</h1><%=current_user.first_name%>
+<%=@projects.inspect%>
+<table class="table table-striped">
+	<tr class = "tablehead">
+	<td>Match</td>
+	<td>Team 1</td>
+	<td>Team 2</td>
+	<td>Match Time</td>
+	<td>Bet on Team 1</td>
+	<td>Bet on Team 2</td>
+	<td></td>
+	</strong></tr>
+<% @projects.each do |project| %>
+	
+	<div class = "project">
+		<tr>
+  	<td><%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li></td>
+  	<td><%=project[:team1]%></td>
+  	<td><%=project[:team2]%></td>
+  	<td><%=project[:matchtime]%></td>
+  	<td></td>
+  	<td></td>
+  	<td> <%= link_to 'View Match Details', "/my/projects/#{project.id}/edit", class: 'btn btn-warning' %></td>
+  	</tr>
+  </div>
+
+<% end %>
+</table>

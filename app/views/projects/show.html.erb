@@ -1,0 +1,11 @@
+<h1><%= @project.title %></h1>
+<h2><%= @project.description %></h2>
+<h3><%= @project.matchtime %></h3>
+<h3><%= @project.team1 %> vs <%= @project.team2 %></h3>
+
+
+<%= link_to 'Bet On This Game', "/projects/#{@project.id}/bets/new", class: 'btn btn-danger' %>
+
+
+<%= link_to '< to match index', "/projects/", class: 'btn btn-info' %>
+
