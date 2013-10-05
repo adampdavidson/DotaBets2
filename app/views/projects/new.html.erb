@@ -1,6 +1,6 @@
 <div class="pledge">
 
-<h2>Submit a new project!</h2>
+<h2>Create a new Match</h2>
 
 
 <%= form_for [@user, @project] do |f| %>
@@ -24,16 +24,20 @@
 	<%= f.text_field :title%>
   </div> 
    <div class="field">
-	<%= f.label :teaser %>
-	<%= f.text_field :teaser%>
+	<%= f.label :description %>
+	<%= f.text_field :description%>
   </div> 
    <div class="field">
-	<%= f.label :description %>
-	<%= f.text_area :description%>
+	<%= f.label :team1 %>
+	<%= f.text_field :team1%>
   </div> 
+     <div class="field">
+  <%= f.label :team2 %>
+  <%= f.text_field :team2%>
+  </div> 
+
     <div class="field">
-	<%= f.label :goal %>
-	<%= f.number_field :goal%>
+  <%= f.datetime_select :matchtime, :default => Time.now %>
   </div> 
 
 
@@ -43,7 +47,7 @@
     <div class="action">
   	
   	<%= button_tag(type: "submit", class: "btn btn-success") do %>
-    <i class="icon-leaf"></i> Create Project
+    <i class="icon-leaf"></i> Create Match
     <% end %>
   </div>
  <%end%>

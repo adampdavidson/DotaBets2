@@ -13,17 +13,29 @@ class ProjectsController < ApplicationController
     	params.require(:title).permit(:team1, :team2, :title, :description, :goal, :user_id)
   	end
 
-    def create
-    @bet = @project.bets.build params[:bet]
-    @bet.user = current_user
-
-    if @pledge.save
-      UserMailer.new_pledge(@pledge).deliver #will now send emails when a pledge is created
-      redirect_to @project, notice: "Nice! Thanks for pledging $#{@pledge.amount} for this project."
-    else
-      render :new
+    def new
+      if (current_user.admin == 1)
+      @project = current_user.projects.build
+      else
+      not_admin
+      end
     end
+
+    def create
+    if (current_user.admin ==1)
+      @project = current_user.projects.build params[:project]
+      if @project.save
+        redirect_to "/projects", notice: "Match created! Write down the time, don't forget to administer closing"
+      else
+        render :new
+      end
+     else
+     not_admin
+     end
   end
+
+
+ 
 
 
 end

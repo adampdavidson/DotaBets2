@@ -1,3 +1,9 @@
+<% if logged_in?%>
+	<% if current_user[:admin]==1 %>
+		<%= link_to 'Admin: Set up a New Match', [:new, :project], class: 'btn btn-danger' %>
+	<% end %>
+<% end %>
+
 <h1>Upcoming Matches</h1>
 
 <table class="table table-striped">

@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
     redirect_to new_user_session_path, :alert => "Please login first."
   end
 
+  def not_admin
+    redirect_to :root, :alert => "You are not authorized to access this page."
+  end
+
 end
