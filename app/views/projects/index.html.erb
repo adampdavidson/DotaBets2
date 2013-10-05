@@ -5,9 +5,10 @@
 <% end %>
 
 <h1>Upcoming Matches</h1>
+<br>
 
 <table class="table table-striped">
-	<tr class = "tablehead">
+	<tr class = "dark">
 	<td>Match</td>
 	<td>Team 1</td>
 	<td>Team 2</td>
@@ -21,8 +22,9 @@
   	<td><%= link_to "#{project[:title]}", "/projects/#{project.id}" %><li class="title"></li></td>
   	<td><%=project[:team1]%></td>
   	<td><%=project[:team2]%></td>
-  	<td><%=project[:matchtime]%></td>
-  	<td> <%= link_to 'View Match Details', "/projects/#{project.id}", class: 'btn btn-warning' %></td>
+  	<td class="far-right_column"><%=project[:matchtime]%></td>
+  	<td> <%= link_to 'View Match Details', "/projects/#{project.id}", class: 'btn btn-darkblue' %></td>
+  	</div>
   	</tr>
   </div>
 

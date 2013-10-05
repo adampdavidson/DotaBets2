@@ -1,8 +1,12 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse" style="position: static;">
   <div class="navbar-inner">
     <div class="container">
       <a class="brand" href="#">DotaBets.com</a>
-      <div class="nav-collapse collapse">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse"> 
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </a>
         <ul class="nav">
           <li class="<%= 'active' if current_page? root_path %>">
             <%= link_to 'Home', :root %>
@@ -18,17 +22,17 @@
         </ul>
       
 
-      </div>
+      
         <div class="pull-right">
         <% if logged_in? %>
               <% if current_user[:admin]==1 %>
               <%= link_to 'Admin: My Matches', "/my/projects", class: 'btn btn-danger' %>
               <% end %>
-        <%= link_to 'Logout', :logout, class: 'btn btn-warning' %>
+        <%= link_to 'Logout', :logout, class: 'btn btn-warning btn-flat' %>
         <% else %>
 
-        <%= link_to " Login ", :login , class: 'btn btn-success' %>
-        <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-success' %>
+        <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-danger' %>
+        <%= link_to " Login ", :login , class: 'btn btn-primary' %>
 
         <% end %>
 

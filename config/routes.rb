@@ -19,6 +19,7 @@ Crowdfunder::Application.routes.draw do
   	match 'login' => 'user_sessions#new', :as => :login
 	match 'logout' => 'user_sessions#destroy', :as => :logout
 
+  #root :to => "projects#index", :requirements => { :current_user => true }
   root :to => "welcome#index"
 
 end

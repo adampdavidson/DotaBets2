@@ -2,18 +2,32 @@
 *= require_self
 *= require_tree
 */
-
-body {
+.container{
+	width: 72% !important;
+}
+/*body {
 	padding-top: 40px;
+}*/
+
+.table th, .table td {
+padding: 8px;
+line-height: 20px;
+text-align: center !important;
 }
 
 .title{
 	list-style-type: none;
 }
 
-.navbar-inner {
+/*.navbar-inner {
 	background-image: linear-gradient(to bottom, rgb(136, 14, 14), #B97979);
-}
+}*/
+
+ .far-right-column {
+ 	text-align: right;
+ 	float: right;
+ }
+
 
 .signup {
 	text-align: center;
@@ -64,7 +78,7 @@ body {
 box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
-.footerbar{
+/*.footerbar{
 	display: inline-block;
 	width:100%;
-}
+}*/
