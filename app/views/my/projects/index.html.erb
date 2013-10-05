@@ -1,18 +1,16 @@
-<br>
-<%= link_to 'Browse Matches', "/my/projects/new", class: 'btn btn-success' %>
-<br>
+<% if current_user[:admin]==1%>
+ 
 
-<h1>My Bets</h1><%=current_user.first_name%>
-<%=@projects.inspect%>
+
+<h1><%=current_user[:username]%>'s Matches</h1>
+
 <table class="table table-striped">
 	<tr class = "tablehead">
 	<td>Match</td>
 	<td>Team 1</td>
 	<td>Team 2</td>
 	<td>Match Time</td>
-	<td>Bet on Team 1</td>
-	<td>Bet on Team 2</td>
-	<td></td>
+	<td> </td>
 	</strong></tr>
 <% @projects.each do |project| %>
 	
@@ -22,11 +20,11 @@
   	<td><%=project[:team1]%></td>
   	<td><%=project[:team2]%></td>
   	<td><%=project[:matchtime]%></td>
-  	<td></td>
-  	<td></td>
-  	<td> <%= link_to 'View Match Details', "/my/projects/#{project.id}/edit", class: 'btn btn-warning' %></td>
+  	<td> <%= link_to 'Edit Match Info', "/my/projects/#{project.id}/edit", class: 'btn btn-warning' %></td>
   	</tr>
   </div>
 
 <% end %>
 </table>
+
+<% end %>

@@ -12,6 +12,7 @@ Crowdfunder::Application.routes.draw do
 
   namespace :my do 
   resources :bets # => My::BetsController
+  resources :projects
   end
 
 
