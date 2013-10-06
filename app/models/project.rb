@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
   validates :team2, presence: true, length: {maximum: 255}
   validates :description, presence: true
   validates :matchtime, presence: true
+  
 
   has_many :bets
 
