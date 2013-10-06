@@ -28,7 +28,7 @@
               <% if current_user[:admin]==1 %>
               <%= link_to 'Admin: My Matches', "/my/projects", class: 'btn btn-danger' %>
               <% end %>
-        <%= link_to 'Logout', :logout, class: 'btn btn-warning btn-flat' %>
+        <%= link_to 'Logout', :logout, class: 'btn btn-warning' %>
         <% else %>
 
         <%= link_to 'Sign Up', [:new, :user], class: 'btn btn-danger' %>

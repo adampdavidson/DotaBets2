@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 	
 
     def index
-    	@projects = Project.all
+    	@projects = Project.find(:all, :order => "matchtime ASC")
   	end
 
   	def show

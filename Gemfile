@@ -43,6 +43,9 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'ffi'
+gem 'bitcoin-ruby', :git => "https://github.com/mhanne/bitcoin-ruby.git"
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
